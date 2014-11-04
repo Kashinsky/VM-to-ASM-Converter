@@ -1,14 +1,15 @@
 #!/usr/bin/python
 import re
+import sys
 lno = 1
-#comment_regex = re.compile('\/\/.*')
-fh = open("tests/BasicTest.vm", "r")
-print "-----------------------------"
-for line in fh:
+
+
+src = open("tests/BasicTest.vm", "r")
+for line in src:
     line = re.sub(r'\/\/.*','',line)
     if line == "\n" or re.match(r'^\s+$',line):
         continue;
     print str(lno),line,
     lno = lno+1
 
-print "----------------------------"
+
