@@ -9,11 +9,10 @@ import sys
 import re
 class VMReader:
     def __init__(self, filename):
-        self.name = filename
+        self.name = filename # the name of the file to be read
         self.fileHandle = open(filename, "r")
-        self.lno = 0
-        self.IC = 0
-        self.labelCount
+        self.lno = 0 # the current line number
+        self.IC = 0 # the instruction number
     
     # Returns: lst, an array containing the next vm instruction in the file
     #               split by whitespace
